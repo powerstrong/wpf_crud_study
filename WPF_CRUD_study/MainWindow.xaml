@@ -24,29 +24,29 @@
             <Grid Grid.Column="0">
                 <StackPanel Margin="20 0">
                     <TextBlock Text="Name" Margin="0 10" Height="30"/>
-                    <TextBlock Text="Age" Margin="0 10" Height="30"/>
+                    <TextBlock Text="Age" Margin="0 10 " Height="30"/>
                     <TextBlock Text="Gender" Margin="0 10" Height="30"/>
                     <TextBlock Text="City" Margin="0 10" Height="30"/>
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="1">
                 <StackPanel>
-                    <TextBox Margin="0 10" Width="200" Height="30"/>
-                    <TextBox Margin="0 10" Width="200" Height="30"/>
-                    <TextBox Margin="0 10" Width="200" Height="30"/>
-                    <TextBox Margin="0 10" Width="200" Height="30"/>
+                    <TextBox x:Name="name_txt" Margin="0 10" Width="200" Height="30"/>
+                    <TextBox x:Name="age_txt" Margin="0 10" Width="200" Height="30"/>
+                    <TextBox x:Name="gender_txt" Margin="0 10" Width="200" Height="30"/>
+                    <TextBox x:Name="city_txt" Margin="0 10" Width="200" Height="30"/>
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="2" Margin="20 0">
-                <TextBox Margin="0 10" Width="460" IsReadOnly="True"/>
+                <DataGrid x:Name="datagrid" Margin="0 10" Width="460"/>
             </Grid>
         </Grid>
         <Grid Grid.Row="2">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Content="Create Record" Width="120" Height="40" FontSize="15" Margin="20"></Button>
-                <Button Content="Read Record" Width="120" Height="40" FontSize="15" Margin="20"></Button>
-                <Button Content="Update Record" Width="120" Height="40" FontSize="15" Margin="20"></Button>
-                <Button Content="Delete Record" Width="120" Height="40" FontSize="15" Margin="20"></Button>
+                <Button x:Name="CreateBtn" Content="Create Record" Width="120" Height="40" FontSize="15" Margin="20" Click="CreateBtn_Click"></Button>
+                <Button x:Name="ReadBtn" Content="Read Record" Width="120" Height="40" FontSize="15" Margin="20" Click="ReadBtn_Click"></Button>
+                <Button x:Name="UpdateBtn" Content="Update Record" Width="120" Height="40" FontSize="15" Margin="20" Click="UpdateBtn_Click"></Button>
+                <Button x:Name="DeleteBtn" Content="Delete Record" Width="120" Height="40" FontSize="15" Margin="20" Click="DeleteBtn_Click"></Button>
             </StackPanel>
         </Grid>
     </Grid>
