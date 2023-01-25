@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_CRUD_study"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="1250">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -31,22 +32,28 @@
             </Grid>
             <Grid Grid.Column="1">
                 <StackPanel>
-                    <TextBox x:Name="name_txt" Margin="0 10" Width="200" Height="30"/>
-                    <TextBox x:Name="age_txt" Margin="0 10" Width="200" Height="30"/>
-                    <TextBox x:Name="gender_txt" Margin="0 10" Width="200" Height="30"/>
-                    <TextBox x:Name="city_txt" Margin="0 10" Width="200" Height="30"/>
+                    <TextBox x:Name="name_txt" Margin="0 10" Width="150" Height="30"/>
+                    <TextBox x:Name="age_txt" Margin="0 10" Width="150" Height="30"/>
+                    <TextBox x:Name="gender_txt" Margin="0 10" Width="150" Height="30"/>
+                    <TextBox x:Name="city_txt" Margin="0 10" Width="150" Height="30"/>
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="2" Margin="20 0">
-                <DataGrid x:Name="datagrid" Margin="0 10" Width="460"/>
+                <DataGrid x:Name="datagrid" Margin="0 10" Width="960"/>
             </Grid>
         </Grid>
         <Grid Grid.Row="2">
+            <StackPanel Orientation="Horizontal" Margin="670 10 0 10">
+                <TextBlock Text="ID" Margin="0"/>
+                <TextBox x:Name="search_txt" Margin="10 0" Width="180"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="3">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="CreateBtn" Content="Create Record" Width="120" Height="40" FontSize="15" Margin="20" Click="CreateBtn_Click"></Button>
-                <Button x:Name="ReadBtn" Content="Read Record" Width="120" Height="40" FontSize="15" Margin="20" Click="ReadBtn_Click"></Button>
-                <Button x:Name="UpdateBtn" Content="Update Record" Width="120" Height="40" FontSize="15" Margin="20" Click="UpdateBtn_Click"></Button>
-                <Button x:Name="DeleteBtn" Content="Delete Record" Width="120" Height="40" FontSize="15" Margin="20" Click="DeleteBtn_Click"></Button>
+                <Button x:Name="CreateBtn" Content="Create Record" Width="120" Height="40" FontSize="15" Margin="20 0" Click="CreateBtn_Click"></Button>
+                <Button x:Name="ReadBtn" Content="Read Record" Width="120" Height="40" FontSize="15" Margin="20 0" Click="ReadBtn_Click"></Button>
+                <Button x:Name="UpdateBtn" Content="Update Record" Width="120" Height="40" FontSize="15" Margin="20 0" Click="UpdateBtn_Click"></Button>
+                <Button x:Name="DeleteBtn" Content="Delete Record" Width="120" Height="40" FontSize="15" Margin="20 0" Click="DeleteBtn_Click"></Button>
             </StackPanel>
         </Grid>
     </Grid>
