@@ -39,6 +39,8 @@ namespace WPF_CRUD_study
             search_txt.Clear();
         }
 
+
+        // vscode mobile test
         public void LoadGrid()
         {
             SqlCommand cmd = new("SELECT * FROM FirstTable", con);
